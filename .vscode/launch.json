@@ -1,6 +1,14 @@
 {
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceFolder}/game-checkout-frontend"
+        },
+
+        {
             "type": "java",
             "name": "Spring Boot-DemoApplication<gamecheckout>",
             "request": "launch",
