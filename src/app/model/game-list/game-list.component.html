@@ -1,0 +1,27 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">PlayerCount</th>
+          <th scope="col">Playing Time</th>
+          <th scope="col">Complexity (1-10)</th>
+          <th scope="col">Rating (1-5)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Convenient iterator built in -->
+        <tr *ngFor="let game of games">
+          <td>{{ game.gameId }}</td>
+          <td>{{ game.title }}</td>
+          <td>{{ game.playerCount }}</td>
+          <td>{{ game.playTime }}</td>
+          <td>{{ game.complexity }}</td>
+          <td>{{ game.rating }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
