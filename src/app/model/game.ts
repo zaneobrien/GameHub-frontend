@@ -1,7 +1,8 @@
 export class Game {
     gameId: string;
     title: string;
-    playerCount: string;
+    maxPlayerCount: number;
+    minPlayerCount: number;
     playTime: string;
     age: number;
     complexity: string;

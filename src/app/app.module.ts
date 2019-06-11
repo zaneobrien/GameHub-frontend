@@ -9,13 +9,15 @@ import { GameService } from './service/game.service';
 import { UserListComponent } from './model/user-list/user-list.component';
 import { UserFormComponent } from './model/user-form/user-form.component';
 import { GameListComponent } from './model/game-list/game-list.component';
+import { GameCheckoutComponent } from './model/game-checkout/game-checkout.component';
  
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserFormComponent,
-    GameListComponent
+    GameListComponent,
+    GameCheckoutComponent
   ],
   imports: [
     BrowserModule,
