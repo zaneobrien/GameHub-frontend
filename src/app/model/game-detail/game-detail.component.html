@@ -1,4 +1,5 @@
-<div class="card">
+<div class="card border-secondary mb-3">
+  <div class="card-header">{{ game.title }}</div>
   <div class="card-body">
     <h5 class="card-title">{{ game.title }} <span class="badge" [ngClass]="{
 															  'badge-success': 'AVAILABLE' === game.status,
@@ -6,7 +7,16 @@
 															 }">{{ game.status }}</span>
       <button style="float:right" *ngIf="showBtn" class="btn btn-primary">Checkout</button>
 	  <button style="float:right" *ngIf="!showBtn" class="btn btn-secondary" disabled>Checkout</button>
-    </h5><p></p>
+	</h5><p></p>
+
+	<div class="card border-secondary mb-3">
+	<div class="card-header">Header</div>
+	<div class="card-body text-primary">
+		<h5 class="card-title">Primary card title</h5>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	</div>
+	</div>
+	<!--
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead class="thead-dark">
@@ -42,6 +52,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+	  </div>
+	-->
   </div>
 </div>

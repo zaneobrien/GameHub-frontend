@@ -13,19 +13,15 @@ export class GameDetailComponent implements OnInit {
 
   @Input() public game = new Game();
 
-  @Input() public Status = Status;
-
   @Input() public showBtn = false;
 
   constructor(private route: ActivatedRoute, private gameService: GameService) {
    }
 
   public show(): void {
-    console.log('status = ' + this.game.status);
-    if ('AVAILABLE' === this.game.status) {
+    if (Status.AVAILABLE === this.game.status) {
         this.showBtn = true;
     }
-    console.log('showBtn = ' + this.showBtn);
   }
 
   ngOnInit() {
