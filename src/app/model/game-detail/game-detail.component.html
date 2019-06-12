@@ -1,5 +1,4 @@
 <div class="card border-secondary mb-3">
-  <div class="card-header">{{ game.title }}</div>
   <div class="card-body">
     <h5 class="card-title">{{ game.title }} <span class="badge" [ngClass]="{
 															  'badge-success': 'AVAILABLE' === game.status,
@@ -9,14 +8,6 @@
 	  <button style="float:right" *ngIf="!showBtn" class="btn btn-secondary" disabled>Checkout</button>
 	</h5><p></p>
 
-	<div class="card border-secondary mb-3">
-	<div class="card-header">Header</div>
-	<div class="card-body text-primary">
-		<h5 class="card-title">Primary card title</h5>
-		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	</div>
-	</div>
-	<!--
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead class="thead-dark">
@@ -28,11 +19,6 @@
               <th scope="col">Complexity (1-10)</th>
               <th scope="col">Designer</th>
               <th scope="col">Publisher</th>
-              <th scope="col">Year Published</th>
-              <th scope="col">Rating (1-5)</th>
-              <th scope="col">Date Added</th>
-              <th scope="col">Last Modified</th>
-              <th scope="col">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -44,6 +30,24 @@
               <td>{{ game.complexity }}</td>
               <td>{{ game.designer }}</td>
               <td>{{ game.publisher }}</td>
+            </tr>
+          </tbody>
+        </table>
+	  </div>
+
+	  <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Year Published</th>
+              <th scope="col">Rating (1-5)</th>
+              <th scope="col">Date Added</th>
+              <th scope="col">Last Modified</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
               <td>{{ game.yearPublished }}</td>
               <td>{{ game.rating }}</td>
               <td>{{ game.dateAdded }}</td>
@@ -53,6 +57,6 @@
           </tbody>
         </table>
 	  </div>
-	-->
+	
   </div>
 </div>

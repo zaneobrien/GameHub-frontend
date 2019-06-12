@@ -15,8 +15,7 @@ export class GameDetailComponent implements OnInit {
 
   @Input() public showBtn = false;
 
-  constructor(private route: ActivatedRoute, private gameService: GameService) {
-   }
+  constructor(private route: ActivatedRoute, private gameService: GameService) {}
 
   public show(): void {
     if (Status.AVAILABLE === this.game.status) {
