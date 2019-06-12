@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="card-body">
+	<h5 class="card-title">{{ game.title }} <span class="badge" [ngClass]="{
+															  'badge-success': 'AVAILABLE' === game.status,
+														      'badge-warning': 'OUT' === game.status
+															 }">{{ game.status }}</span>
+	<button style="float:right" *ngIf="showBtn" class="btn btn-primary">Checkout</button>		
+	<button style="float:right" *ngIf="!showBtn" class="btn btn-secondary" disabled>Checkout</button>												
+															</h5>
+
+	
+	<p>														 
+	<div class="table-responsive">
+	<table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Player Count</th>
+		  <th scope="col">Playing Time</th>
+		  <th scope="col">Minimum Age</th>
+		  <th scope="col">Complexity (1-10)</th>
+		  <th scope="col">Designer</th>
+		  <th scope="col">Publisher</th>
+		  <th scope="col">Year Published</th>
+		  <th scope="col">Rating (1-5)</th>
+		  <th scope="col">Date Added</th>
+		  <th scope="col">Last Modified</th>
+		  <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ game.title }}</td>
+          <td>{{ game.minPlayerCount }}-{{ game.maxPlayerCount }}</td>
+		  <td>{{ game.playTime }}</td>
+		  <td>{{ game.age }}</td>
+		  <td>{{ game.complexity }}</td>
+		  <td>{{ game.designer }}</td>
+		  <td>{{ game.publisher }}</td>
+		  <td>{{ game.yearPublished }}</td>
+		  <td>{{ game.rating }}</td>
+		  <td>{{ game.dateAdded }}</td>
+		  <td>{{ game.lastModified }}</td>
+		  <td>{{ game.status }}</td>k
+        </tr>
+      </tbody>
+	</table>
+	
+	</div>
+  </div>
+  
+</div>
+
+

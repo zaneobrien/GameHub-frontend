@@ -1,3 +1,5 @@
+import { Status } from './status';
+
 export class Game {
     gameId: string;
     title: string;
@@ -11,5 +13,6 @@ export class Game {
     yearPublished: number;
     rating: string;
     dateAdded: Date;
-    lastModified: Date;
+	lastModified: Date;
+	status: Status;
 }

@@ -10,6 +10,7 @@ import { UserListComponent } from './model/user-list/user-list.component';
 import { UserFormComponent } from './model/user-form/user-form.component';
 import { GameListComponent } from './model/game-list/game-list.component';
 import { GameCheckoutComponent } from './model/game-checkout/game-checkout.component';
+import { GameDetailComponent } from './model/game-detail/game-detail.component';
  
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GameCheckoutComponent } from './model/game-checkout/game-checkout.compo
     UserListComponent,
     UserFormComponent,
     GameListComponent,
-    GameCheckoutComponent
+    GameCheckoutComponent,
+    GameDetailComponent
   ],
   imports: [
     BrowserModule,
