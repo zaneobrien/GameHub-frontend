@@ -17,9 +17,9 @@ export class GameDetailComponent implements OnInit {
 
   @Input() public showBtn = false;
 
-  constructor(private route: ActivatedRoute,
-			  private gameService: GameService,
-			  private modalService: ModalDialogService,
+  constructor(private route: ActivatedRoute, 
+    private gameService: GameService,
+    private modalService: ModalDialogService,
 			  private viewRef: ViewContainerRef) {}
 
   public show(): void {
