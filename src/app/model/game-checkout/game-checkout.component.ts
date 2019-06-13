@@ -16,8 +16,8 @@ export class GameCheckoutComponent implements IModalDialog {
 
   constructor() {
     this.actionButtons = [
+      { text: 'Checkout this game', onAction: () => true },
       { text: 'Close' }, // no special processing here
-      { text: 'Checkout this game', onAction: () => true }
     ];
   }
 
