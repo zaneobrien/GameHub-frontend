@@ -1,19 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { Game } from 'src/app/model/game';
-import { History } from 'src/app/model/history';
-import { User } from 'src/app/model/user';
-
+import { Component, ComponentRef } from '@angular/core';
+import { IModalDialog, IModalDialogOptions, IModalDialogButton } from 'ngx-modal-dialog';
 
 @Component({
   selector: 'app-game-checkout',
   templateUrl: './game-checkout.component.html',
   styleUrls: ['./game-checkout.component.css']
 })
-export class GameCheckoutComponent implements OnInit {
+export class GameCheckoutComponent implements IModalDialog {
 
-  constructor() { }
+  actionButtons: IModalDialogButton[];
 
-  ngOnInit() {
+  myData: any;
+
+  today: number = Date.now();
+  
+  constructor() {
+    this.actionButtons = [
+      { text: 'Close' }, // no special processing here
+      { text: 'Checkout this game', onAction: () => true }
+    ];
   }
 
+  dialogInit(reference: ComponentRef<IModalDialog>, options: Partial<IModalDialogOptions<any>>) {
+    this.myData = options.data;
+  }
 }

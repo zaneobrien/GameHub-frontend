@@ -11,6 +11,7 @@ import { UserFormComponent } from './model/user-form/user-form.component';
 import { GameListComponent } from './model/game-list/game-list.component';
 import { GameCheckoutComponent } from './model/game-checkout/game-checkout.component';
 import { GameDetailComponent } from './model/game-detail/game-detail.component';
+import { ModalDialogModule } from 'ngx-modal-dialog';
  
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { GameDetailComponent } from './model/game-detail/game-detail.component';
     UserFormComponent,
     GameListComponent,
     GameCheckoutComponent,
-    GameDetailComponent
+	GameDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+	FormsModule,
+	ModalDialogModule.forRoot()
   ],
   providers: [UserService, GameService],
   bootstrap: [AppComponent]
