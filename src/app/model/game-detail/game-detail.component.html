@@ -50,33 +50,41 @@
             <tr>
               <td>{{ game.yearPublished }}</td>
               <td>{{ game.rating }}</td>
-              <td>{{ game.dateAdded }}</td>
-              <td>{{ game.lastModified }}</td>
+              <td>{{ game.dateAdded | date:'medium' }}</td>
+              <td>{{ game.lastModified | date:'medium' }}</td>
               <td>{{ game.status }}</td>
             </tr>
           </tbody>
         </table>
 	  </div>
+
+	  <h5>History</h5>
+	  <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+			  <th scope="col">Status</th>
+			  <th scope="col">User</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+			<tr>
+			  <td>Checked In</td><!-- Mock Data -->
+			  <td>Tuan Le</td>
+              <td>Jun 10, 2019, 2:52:12 PM</td>
+            </tr>
+            <tr>
+			  <td>Checked Out</td>
+			  <td>Tuan Le</td>
+              <td>June 6, 2019, 2:52:12 PM</td>
+            </tr>
+          </tbody>
+        </table>
+	  </div>
 	
+	  <button (click)="openNewDialog()" type="button" style="float:left" *ngIf="showBtn" class="btn btn-primary">Checkout</button>
+	  <button type="button" style="float:left" *ngIf="!showBtn" class="btn btn-secondary" disabled>Checkout</button>
   </div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>

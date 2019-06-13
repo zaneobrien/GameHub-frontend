@@ -3,7 +3,6 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">#</th>
           <th scope="col">Title</th>
           <th scope="col">Player Count</th>
           <th scope="col">Playing Time</th>
@@ -15,7 +14,6 @@
       <tbody>
         <!-- Convenient iterator built in -->
         <tr *ngFor="let game of games">
-          <td>{{ game.gameId }}</td>
           <td><a [routerLink]="['/detail/', game.gameId]">{{ game.title }}</a></td>
           <td>{{ game.minPlayerCount }}-{{ game.maxPlayerCount }}</td>
           <td>{{ game.playTime }} min</td>
