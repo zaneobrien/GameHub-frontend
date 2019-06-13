@@ -3,7 +3,7 @@ import { Game } from '../game';
 import { ActivatedRoute } from '@angular/router';
 import { GameService } from 'src/app/service/game.service';
 import { Status } from '../status';
-import { ModalDialogService, SimpleModalComponent } from 'ngx-modal-dialog';
+import { ModalDialogService } from 'ngx-modal-dialog';
 import { GameCheckoutComponent } from '../game-checkout/game-checkout.component';
 
 @Component({
@@ -17,7 +17,10 @@ export class GameDetailComponent implements OnInit {
 
   @Input() public showBtn = false;
 
-  constructor(private route: ActivatedRoute, private gameService: GameService, private modalService: ModalDialogService, private viewRef: ViewContainerRef) {}
+  constructor(private route: ActivatedRoute,
+			  private gameService: GameService,
+			  private modalService: ModalDialogService,
+			  private viewRef: ViewContainerRef) {}
 
   public show(): void {
     if (Status.AVAILABLE === this.game.status) {
