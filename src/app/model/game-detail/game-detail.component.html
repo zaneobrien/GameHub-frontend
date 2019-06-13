@@ -16,7 +16,7 @@
               <th scope="col">Player Count</th>
               <th scope="col">Playing Time</th>
               <th scope="col">Minimum Age</th>
-              <th scope="col">Complexity (1-10)</th>
+              <th scope="col">Complexity</th>
               <th scope="col">Designer</th>
               <th scope="col">Publisher</th>
             </tr>
@@ -25,7 +25,7 @@
             <tr>
               <td>{{ game.title }}</td>
               <td>{{ game.minPlayerCount }}-{{ game.maxPlayerCount }}</td>
-              <td>{{ game.playTime }}</td>
+              <td>{{ game.playTime }} min</td>
               <td>{{ game.age }}</td>
               <td>{{ game.complexity }}</td>
               <td>{{ game.designer }}</td>
@@ -40,7 +40,7 @@
           <thead class="thead-dark">
             <tr>
               <th scope="col">Year Published</th>
-              <th scope="col">Rating (1-5)</th>
+              <th scope="col">Rating (1-10)</th>
               <th scope="col">Date Added</th>
               <th scope="col">Last Modified</th>
               <th scope="col">Status</th>

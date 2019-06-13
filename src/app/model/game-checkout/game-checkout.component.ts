@@ -13,7 +13,7 @@ export class GameCheckoutComponent implements IModalDialog {
   myData: any;
 
   today: number = Date.now();
-  
+
   constructor() {
     this.actionButtons = [
       { text: 'Close' }, // no special processing here

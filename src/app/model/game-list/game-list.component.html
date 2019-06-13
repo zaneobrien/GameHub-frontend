@@ -7,8 +7,8 @@
           <th scope="col">Title</th>
           <th scope="col">Player Count</th>
           <th scope="col">Playing Time</th>
-          <th scope="col">Complexity (1-10)</th>
-		  <th scope="col">Rating (1-5)</th>
+          <th scope="col">Complexity</th>
+		  <th scope="col">Rating (1-10)</th>
 		  <th scope="col">Status</th>
         </tr>
       </thead>
@@ -18,7 +18,7 @@
           <td>{{ game.gameId }}</td>
           <td><a [routerLink]="['/detail/', game.gameId]">{{ game.title }}</a></td>
           <td>{{ game.minPlayerCount }}-{{ game.maxPlayerCount }}</td>
-          <td>{{ game.playTime }}</td>
+          <td>{{ game.playTime }} min</td>
           <td>{{ game.complexity }}</td>
 		  <td>{{ game.rating }}</td>
 		  <td>{{ game.status }}</td>
