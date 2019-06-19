@@ -12,6 +12,7 @@ import { GameListComponent } from './model/game-list/game-list.component';
 import { GameCheckoutComponent } from './model/game-checkout/game-checkout.component';
 import { GameDetailComponent } from './model/game-detail/game-detail.component';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+import { HistoryService } from './service/history.service';
  
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 	FormsModule,
 	ModalDialogModule.forRoot()
   ],
-  providers: [UserService, GameService],
+  providers: [UserService, GameService, HistoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

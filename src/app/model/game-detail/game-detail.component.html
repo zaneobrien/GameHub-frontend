@@ -69,15 +69,10 @@
             </tr>
           </thead>
           <tbody>
-			<tr>
-			  <td>Checked In</td><!-- Mock Data -->
-			  <td>Tuan Le</td>
-              <td>Jun 10, 2019, 2:52:12 PM</td>
-            </tr>
-            <tr>
-			  <td>Checked Out</td>
-			  <td>Tuan Le</td>
-              <td>June 6, 2019, 2:52:12 PM</td>
+			<tr *ngFor="let item of history">
+			  <td>{{ item.action }}</td>
+			  <td>{{ item.user.name}}</td>
+              <td>{{ item.timestamp | date:'medium' }}</td>
             </tr>
           </tbody>
         </table>
