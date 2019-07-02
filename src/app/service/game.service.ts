@@ -16,7 +16,13 @@ export class GameService {
     return this.http.get<Game[]>(this.gamesUrl);
   }
 
-  //public save(game: Game) {
-  //  return this.http.post<Game>(this.gamesUrl, game);
-  //}
+  public findById(id: number): Observable<Game> {
+	//console.log(id);
+    return this.http.get<Game>(this.gamesUrl + '/' + id);
+  }
+
+  public checkIn(userId: number, gameId: number): Observable<Game> {
+	  return this.http.get<Game>(this.gamesUrl);
+  }
+
 }

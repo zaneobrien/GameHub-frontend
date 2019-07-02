@@ -1,7 +1,10 @@
+import { Status } from './status';
+
 export class Game {
     gameId: string;
     title: string;
-    playerCount: string;
+    maxPlayerCount: number;
+    minPlayerCount: number;
     playTime: string;
     age: number;
     complexity: string;
@@ -10,5 +13,6 @@ export class Game {
     yearPublished: number;
     rating: string;
     dateAdded: Date;
-    lastModified: Date;
+	lastModified: Date;
+	status: Status;
 }

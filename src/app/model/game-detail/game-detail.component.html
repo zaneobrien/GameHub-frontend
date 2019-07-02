@@ -1,0 +1,85 @@
+<div class="card border-secondary mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{ game.title }} <span class="badge" [ngClass]="{
+															  'badge-success': 'AVAILABLE' === game.status,
+														      'badge-warning': 'OUT' === game.status
+															 }">{{ game.status }}</span>
+      <button (click)="openNewDialog()" type="button" style="float:right" *ngIf="showBtn" class="btn btn-primary">Checkout</button>
+	  <button type="button" style="float:right" *ngIf="!showBtn" class="btn btn-secondary" disabled>Checkout</button>
+	</h5><p></p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Player Count</th>
+              <th scope="col">Playing Time</th>
+              <th scope="col">Minimum Age</th>
+              <th scope="col">Complexity</th>
+              <th scope="col">Designer</th>
+              <th scope="col">Publisher</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ game.title }}</td>
+              <td>{{ game.minPlayerCount }}-{{ game.maxPlayerCount }}</td>
+              <td>{{ game.playTime }} min</td>
+              <td>{{ game.age }}</td>
+              <td>{{ game.complexity }}</td>
+              <td>{{ game.designer }}</td>
+              <td>{{ game.publisher }}</td>
+            </tr>
+          </tbody>
+        </table>
+	  </div>
+
+	  <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Year Published</th>
+              <th scope="col">Rating (1-10)</th>
+              <th scope="col">Date Added</th>
+              <th scope="col">Last Modified</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ game.yearPublished }}</td>
+              <td>{{ game.rating }}</td>
+              <td>{{ game.dateAdded | date:'medium' }}</td>
+              <td>{{ game.lastModified | date:'medium' }}</td>
+              <td>{{ game.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+	  </div>
+
+	  <h5>History</h5>
+	  <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+			  <th scope="col">Status</th>
+			  <th scope="col">User</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+			<tr *ngFor="let item of history">
+			  <td>{{ item.action }}</td>
+			  <td>{{ item.user.name}}</td>
+              <td>{{ item.timestamp | date:'medium' }}</td>
+            </tr>
+          </tbody>
+        </table>
+	  </div>
+	
+	  <button (click)="openNewDialog()" type="button" style="float:left" *ngIf="showBtn" class="btn btn-primary">Checkout</button>
+	  <button type="button" style="float:left" *ngIf="!showBtn" class="btn btn-secondary" disabled>Checkout</button>
+  </div>
+</div>
+

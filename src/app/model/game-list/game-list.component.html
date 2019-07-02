@@ -3,23 +3,23 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">#</th>
           <th scope="col">Title</th>
-          <th scope="col">PlayerCount</th>
+          <th scope="col">Player Count</th>
           <th scope="col">Playing Time</th>
-          <th scope="col">Complexity (1-10)</th>
-          <th scope="col">Rating (1-5)</th>
+          <th scope="col">Complexity</th>
+		  <th scope="col">Rating (1-10)</th>
+		  <th scope="col">Status</th>
         </tr>
       </thead>
       <tbody>
         <!-- Convenient iterator built in -->
         <tr *ngFor="let game of games">
-          <td>{{ game.gameId }}</td>
-          <td>{{ game.title }}</td>
-          <td>{{ game.playerCount }}</td>
-          <td>{{ game.playTime }}</td>
+          <td><a [routerLink]="['/detail/', game.gameId]">{{ game.title }}</a></td>
+          <td>{{ game.minPlayerCount }}-{{ game.maxPlayerCount }}</td>
+          <td>{{ game.playTime }} min</td>
           <td>{{ game.complexity }}</td>
-          <td>{{ game.rating }}</td>
+		  <td>{{ game.rating }}</td>
+		  <td>{{ game.status }}</td>
         </tr>
       </tbody>
     </table>

@@ -9,21 +9,28 @@ import { GameService } from './service/game.service';
 import { UserListComponent } from './model/user-list/user-list.component';
 import { UserFormComponent } from './model/user-form/user-form.component';
 import { GameListComponent } from './model/game-list/game-list.component';
+import { GameCheckoutComponent } from './model/game-checkout/game-checkout.component';
+import { GameDetailComponent } from './model/game-detail/game-detail.component';
+import { ModalDialogModule } from 'ngx-modal-dialog';
+import { HistoryService } from './service/history.service';
  
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserFormComponent,
-    GameListComponent
+    GameListComponent,
+    GameCheckoutComponent,
+	GameDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+	FormsModule,
+	ModalDialogModule.forRoot()
   ],
-  providers: [UserService, GameService],
+  providers: [UserService, GameService, HistoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

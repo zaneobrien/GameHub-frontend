@@ -6,6 +6,14 @@
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:4200",
             "webRoot": "${workspaceFolder}/game-checkout-frontend"
+        },
+        {
+            "name": "Launch Chrome game-checkout-frontend on Angular CLI Server",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}",
+            "port": 9299
         }
     ]
 }
