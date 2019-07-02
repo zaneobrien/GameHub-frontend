@@ -17,8 +17,12 @@ export class GameService {
   }
 
   public findById(id: number): Observable<Game> {
-	console.log(id);
+	//console.log(id);
     return this.http.get<Game>(this.gamesUrl + '/' + id);
+  }
+
+  public checkIn(userId: number, gameId: number): Observable<Game> {
+	  return this.http.get<Game>(this.gamesUrl);
   }
 
 }
